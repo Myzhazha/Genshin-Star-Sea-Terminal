@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="docs/images/main_preview.webp" alt="Genshin Star Sea Terminal" width="100%">
+</div>
+
 # 原神主题桌面挂件（ESP32-P4 + 4.3" MIPI DSI）
 
 一个基于 **ESP32-P4** 的桌面小挂件：4.3 寸 480×800 MIPI DSI 屏、触摸操作、原神主题 UI，
