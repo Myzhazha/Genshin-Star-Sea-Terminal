@@ -1,0 +1,28 @@
+dependencies:
+  idf: ">=5.4.0"
+  # LVGL 9 显示适配层（乐鑫官方）
+  espressif/esp_lvgl_port:
+    version: "^2.7.0"
+    public: true
+  lvgl/lvgl:
+    version: "~9.4.0"
+    public: true
+  # ST7123 触摸：使用本地 components/esp_lcd_touch_st7123 修复版
+  # （官方组件按 max_touches 动态读坐标，读不完 checksum 导致后续触摸失效）
+  espressif/esp_lcd_touch:
+    version: "^1.0.0"
+    public: true
+  # ESP-Hosted：C6 经 SDIO 接入（WiFi + BLE），v2.9.x 已支持 ESP32-P4 作 host
+  espressif/esp_hosted:
+    version: "^2.9.0"
+    public: true
+  # P4 作为 SDIO master，直接烧录空白 C6 的 ROM download 模式
+  espressif/esp-serial-flasher:
+    version: "^2.0.0"
+    public: true
+  espressif/esp_wifi_remote:
+    version: "^1.2.0"
+    public: true
+  # Helix MP3 软件解码（alert.mp3 提示音）
+  chmorgan/esp-libhelix-mp3:
+    version: "^1.0.3"

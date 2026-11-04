@@ -1,0 +1,48 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "hw_board.c"
+        "sdcard.c"
+        "ina226.c"
+        "ds1302.c"
+        "mjpeg_player.c"
+        "audio_mp3.c"
+        "proximity_ble.c"
+        "hosted_wifi.c"
+        "c6_ota.c"
+        "app_media.c"
+        "app_settings.c"
+        "lvgl_ui/lvgl_ui_settings.c"
+    INCLUDE_DIRS
+        "."
+        "lvgl_ui"
+    REQUIRES
+        esp_lcd_st7102
+        esp_lvgl_port
+        lvgl
+        esp_lcd_touch_st7123
+        driver
+        esp_lcd
+        esp_hosted
+        esp-serial-flasher
+        esp_wifi_remote
+        esp_wifi
+        bt
+        esp_netif
+        esp_event
+        nvs_flash
+        sdmmc
+        fatfs
+        esp_rom
+        esp_driver_jpeg
+        esp-libhelix-mp3
+        app_update
+        bootloader_support
+        spi_flash
+    EMBED_FILES
+        "assets/boot_text.rgb565"
+        "assets/fonts/hywenhei_cjk_16.bin"
+        "assets/fonts/hywenhei_title_32.bin"
+)
+
+target_compile_definitions(${COMPONENT_LIB} PUBLIC LV_CONF_INCLUDE_SIMPLE=1)

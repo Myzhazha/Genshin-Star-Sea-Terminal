@@ -1,0 +1,39 @@
+menu "Genshin UI Hardware"
+
+    config GENSHIN_VIBRATION_INA_PIN
+        int "Vibration motor H-bridge INA GPIO (TC118S)"
+        default 47
+
+    config GENSHIN_VIBRATION_INB_PIN
+        int "Vibration motor H-bridge INB GPIO (TC118S)"
+        default 46
+
+    config GENSHIN_BACKLIGHT_PIN
+        int "LCD backlight PWM GPIO"
+        default 23
+
+    config GENSHIN_BACKLIGHT_PWM_FREQ_HZ
+        int "Backlight PWM frequency (Hz)"
+        default 20000
+
+    config GENSHIN_BACKLIGHT_DEFAULT_PERCENT
+        int "Backlight default brightness (percent)"
+        range 1 100
+        default 80
+
+    config GENSHIN_BUTTON_PIN
+        int "Mode switch button GPIO (active low)"
+        default 9
+
+    config GENSHIN_ALERT_MP3_PATH
+        string "Proximity alert mp3 path on SD card"
+        default "/alert/alert.mp3"
+
+    config GENSHIN_SD_PWR_CTRL_LDO_CHAN
+        int "SD card power on-chip LDO channel (-1 = external/always-on supply)"
+        default 4
+        help
+            ESP32-P4 的 SD 卡 VDD 可由内部 LDO 供电（官方 P4 板默认 LDO_VO4=4）。
+            如果 SD 卡电源由板上常供电或外部 LDO 提供，设为 -1 跳过。
+
+endmenu
