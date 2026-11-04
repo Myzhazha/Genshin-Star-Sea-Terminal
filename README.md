@@ -295,3 +295,11 @@ npx lv_font_conv --bpp 4 --size 16 --font 你的字体.ttf \
 - [esp-serial-flasher](https://github.com/espressif/esp-serial-flasher)（P4 直刷 C6）
 - [esp-libhelix-mp3](https://github.com/chmorgan/esp-libhelix-mp3)（MP3 解码）
 - [LVGL_UI 原神主题界面](https://github.com/)（作者原项目）
+
+---
+
+## License / 许可证
+
+代码部分采用 **MIT License**（见 [LICENSE](LICENSE)）。
+
+> 例外：`main/assets/fonts/` 下的字库文件来自商业字体，**不属于 MIT 许可范围**，详见 LICENSE 末尾说明与上文「字体与版权说明」。
